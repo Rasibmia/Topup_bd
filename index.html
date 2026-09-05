@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Up BD - Diamond Top Up</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6fb;
+    color: #222;
+}
+
+header {
+    background: linear-gradient(135deg, #6c2cff, #9b4dff);
+    color: white;
+    padding: 18px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 35px 15px;
+    background: white;
+}
+
+.hero h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #666;
+}
+
+.container {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 15px;
+}
+
+.section {
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+}
+
+.section h2 {
+    margin-bottom: 18px;
+}
+
+.packages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+}
+
+.package {
+    border: 2px solid #eee;
+    border-radius: 12px;
+    padding: 18px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.package:hover,
+.package.active {
+    border-color: #762cff;
+    background: #f4edff;
+}
+
+.package .diamond {
+    font-size: 30px;
+}
+
+.package h3 {
+    margin: 8px 0;
+}
+
+.price {
+    color: #762cff;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin: 13px 0 6px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.payment {
+    background: #fff1f7;
+    border-left: 5px solid #e2136e;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.bkash {
+    color: #e2136e;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+button {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #6c2cff, #9b4dff);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 18px;
+}
+
+button:hover {
+    opacity: .9;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #777;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">💎 TOP UP BD</div>
+    <p>Fast & Easy Diamond Top Up</p>
+</header>
+
+<section class="hero">
+    <h1>💎 Diamond Top Up</h1>
+    <p>আপনার Player ID দিয়ে সহজেই অর্ডার করুন</p>
+</section>
+
+<div class="container">
+
+    <div class="section">
+        <h2>💎 Diamond Package নির্বাচন করুন</h2>
+
+        <div class="packages">
+
+            <div class="package" onclick="selectPackage(this, '25 Diamonds - ৳25')">
+                <div class="diamond">💎</div>
+                <h3>25 Diamonds</h3>
+                <div class="price">৳25</div>
+            </div>
+
+            <div class="package" onclick="selectPackage(this, '50 Diamonds - ৳45')">
+                <div class="diamond">💎</div>
+                <h3>50 Diamonds</h3>
+                <div class="price">৳45</div>
+            </div>
+
+            <div class="package" onclick="selectPackage(this, '115 Diamonds - ৳90')">
+                <div class="diamond">💎</div>
+                <h3>115 Diamonds</h3>
+                <div class="price">৳90</div>
+            </div>
+
+            <div class="package" onclick="selectPackage(this, '240 Diamonds - ৳180')">
+                <div class="diamond">💎</div>
+                <h3>240 Diamonds</h3>
+                <div class="price">৳180</div>
+            </div>
+
+            <div class="package" onclick="selectPackage(this, '610 Diamonds - ৳450')">
+                <div class="diamond">💎</div>
+                <h3>610 Diamonds</h3>
+                <div class="price">৳450</div>
+            </div>
+
+            <div class="package" onclick="selectPackage(this, '1240 Diamonds - ৳900')">
+                <div class="diamond">💎</div>
+                <h3>1240 Diamonds</h3>
+                <div class="price">৳900</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section">
+
+        <h2>🎮 Player Information</h2>
+
+        <label>Player ID</label>
+        <input type="text" id="playerId" placeholder="আপনার Player ID লিখুন">
+
+        <label>আপনার নাম</label>
+        <input type="text" id="name" placeholder="আপনার নাম">
+
+        <label>মোবাইল নম্বর</label>
+        <input type="text" id="phone" placeholder="01XXXXXXXXX">
+
+    </div>
+
+    <div class="section">
+
+        <h2>💳 Payment</h2>
+
+        <div class="payment">
+            <div>bKash Payment</div>
+            <div class="bkash">📱 01301335706</div>
+            <p style="margin-top:8px;">
+                Send Money করার পর নিচে Transaction ID দিন।
+            </p>
+        </div>
+
+        <label>Transaction ID</label>
+        <input type="text" id="trx" placeholder="যেমন: 8A7B6C5D">
+
+        <button onclick="submitOrder()">অর্ডার করুন</button>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Top Up BD — All Rights Reserved
+</footer>
+
+<script>
+
+let selectedPackage = "";
+
+function selectPackage(element, packageName) {
+
+    document.querySelectorAll(".package")
+        .forEach(item => item.classList.remove("active"));
+
+    element.classList.add("active");
+
+    selectedPackage = packageName;
+}
+
+function submitOrder() {
+
+    const playerId = document.getElementById("playerId").value;
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const trx = document.getElementById("trx").value;
+
+    if (!selectedPackage) {
+        alert("দয়া করে একটি Diamond Package নির্বাচন করুন।");
+        return;
+    }
+
+    if (!playerId || !name || !phone || !trx) {
+        alert("দয়া করে সব তথ্য পূরণ করুন।");
+        return;
+    }
+
+    alert(
+        "অর্ডার গ্রহণ করা হয়েছে!\\n\\n" +
+        "Package: " + selectedPackage +
+        "\\nPlayer ID: " + playerId +
+        "\\nTransaction ID: " + trx
+    );
+}
+
+</script>
+
+</body>
+</html>
